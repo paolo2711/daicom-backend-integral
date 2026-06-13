@@ -13,6 +13,7 @@ public class ServidorBackend {
             
             server.createContext("/api/certificates", new CertificadoController());
             server.createContext("/api/orders", new OrdenController());
+            server.createContext("/api/logs", new com.daicom.controladores.LogController());
             
             server.setExecutor(null);
             server.start();

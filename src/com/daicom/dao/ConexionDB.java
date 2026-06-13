@@ -6,15 +6,15 @@ import java.sql.SQLException;
 
 public class ConexionDB { 
     
-    // Cambia el nombre de la BD si en tu PC se llama distinto (ej. "daicom_db")
-    private static final String URL = "jdbc:mysql://localhost:3306/daicom_db?useSSL=false&serverTimezone=UTC";
+    // cambiar de nombre a bd)
+    private static final String URL = "jdbc:mysql://localhost:3306/daicom_production?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASSWORD = ""; // Pon tu clave de MySQL aquí
+    private static final String PASSWORD = ""; 
 
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            // Carga el driver que descargaste (mysql-connector-j.jar)
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("✅ Conexión exitosa a la base de datos de DAICOM.");
